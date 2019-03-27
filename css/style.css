@@ -1,0 +1,89 @@
+input, select, button, textarea {
+  /*-webkit-appearance: none;*/
+  /*-moz-appearance: none;*/
+  /*appearance: none;*/
+  font: inherit;
+  color: inherit;
+  outline: none;
+}
+/*复选和按钮公用*/
+.input, .butt{
+  padding: .75rem;
+  margin: .375rem;
+  background-color: transparent;
+  border-radius: 4px;
+}
+/*按钮*/
+.input{
+  border: 2px solid #f35626;
+  color: #f35626;
+  cursor: pointer;
+  -webkit-animation: hue 60s infinite linear;
+}
+body{
+  /*overflow-x: hidden;*/
+}
+select{
+  border: 1px solid #c0c8c9;
+  border-radius: 4px;
+}
+html{
+  font: 100%/1.5 'Roboto', sans-serif;
+  text-align: center;
+  overflow: hidden;
+}
+
+@media (min-width: 640px) {
+  html{
+    height: 100%;
+  }
+  html:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+  }
+  body{
+    max-width: 600px;
+    display: inline-block;
+    vertical-align: middle;
+    /*text-align: center;*/
+  }
+}
+/*animate.css 主动体*/
+.mega{
+  color: #f35626;
+  font-size: 6rem;
+  font-weight: 100;
+  letter-spacing: -0.05em;
+  background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: hue 60s infinite linear;
+}
+/*原信息*/
+.meta{
+  color: #7b8993;
+  padding: 1rem;
+}
+footer a{
+  color: inherit;
+  cursor: pointer;
+  -webkit-animation: hue 60s infinite linear;
+}
+footer a:hover{
+  color: #f35626;
+}
+
+
+/* 渐变的颜色 */
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
