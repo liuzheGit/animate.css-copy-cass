@@ -162,17 +162,18 @@
     el: '#app',
     data: {
       selVal: 'bounce',
+      className: null
     },
     methods: {
       show(e){
         e.preventDefault();
         let $dom = this.$refs.current;
-        let that = this;
-        $dom.classList.add(this.selVal);
+        let tmp = this.selVal;
+        $dom.classList.add(tmp);
         $dom.addEventListener('animationend', handle, false);
         $dom.addEventListener('webkitAnimationEnd', handle, false);
         function handle(){
-          $dom.classList.remove(that.selVal);
+          $dom.classList.remove(tmp);
         }
       },
       copyClass(e){
